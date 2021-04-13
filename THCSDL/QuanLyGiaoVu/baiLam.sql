@@ -1,6 +1,7 @@
 -- Linux: Ubuntu 20.10
 -- SQL Server on Linux
 -- SQL GUI: DBever Version 21.0.2.202104042040
+-- Latest updates at: https://github.com/thuanpham2311/dataLab/blob/master/THCSDL/QuanLyGiaoVu/baiLam.sql
 
 use QuanLyGiaoVu
 go
