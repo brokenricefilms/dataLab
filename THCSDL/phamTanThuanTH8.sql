@@ -10,19 +10,19 @@ go
 
 create table DocGia (
 	MaDocGia int not null primary key,
-	HoTen varchar(255),
+	HoTen nvarchar(255),
 	NgaySinh date
 )
 
 create table LoaiSach (
 	MaLoaiSach int not null primary key,
-	TenLoaiSach varchar(255)
+	TenLoaiSach nvarchar(255)
 )
 
 create table DauSach (
 	MaDauSach int not null,
-	TuaSach varchar(255),
-	TacGia varchar(255),
+	TuaSach nvarchar(255),
+	TacGia nvarchar(255),
 	NgayXuatBan date,
 	SoLuong int,
 	GiaBan money,
@@ -32,7 +32,7 @@ create table DauSach (
 
 create table CuonSach (
 	MaCuonSach int not null,
-	TinhTrang varchar(255),
+	TinhTrang nvarchar(255),
 	MaDauSach int not null,
 	primary key (MaCuonSach, MaDauSach)
 )
@@ -73,3 +73,13 @@ foreign key (MaDauSach) references DauSach(MaDauSach)
 
 alter table MuonSach add constraint FK_CuonSach_MuonSach
 foreign key (MaCuonSach) references CuonSach(MaCuonSach)
+
+insert into DocGia values
+(1, N'pham tuấn', '23/11/2001'),
+(2, N'pham tấn', '3/11/2001'),
+(3, N'pham tu', '2/11/2001');
+
+insert into LoaiSach values
+(1, 'one life'),
+(2, 'two life'),
+(3, 'three life');
